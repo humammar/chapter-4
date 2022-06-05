@@ -5,66 +5,75 @@ const circle = "circlePlayer";
 const boxElements = document.querySelectorAll(".box");
 const resetButton = document.getElementById("reset");
 
-let isCrossPlayerTurn = true;
+let isCrossPlayerTurn = false;
 
 
-start();
-restart.addEventListener('click', restartGame);
+resetButton.onclick = startGame;
 
-function start() {
-  isCrossPlayerTurn = true;
-  box.forEach(box => {
-    const removeCrossPlayer = box.classList.remove(cross, disabled);
-    const removeCirclePlayer = box.classList.remove(circle, disabled);
-    box.addEventListener('click', handleClick, {once: true})
-  })
-}
-
-function restartGame() {
-  start();
+function placeMark(box, currentClass) {
+  box.classList.add(currentClass);
 }
 
 function handleClick(e) {
   const boxTarget = e.target;
-  const currentClass = isCrossPlayerTurn ? cross : circle;
-  placeMark(boxTarget, currentClass);
-  swapTurn();
+  if (turn === cross) {
+      boxTarget.style.backgroundImage = cross;
+      turn = circle;
+  } else {
+      boxTarget.style.backgroundImage = circle;   
+      turn = cross; 
+  placeMark(boxTarget, turn);
 }
 
-function placeMark(box, currentClass) {
-  box.classList.add(currentClass, disabled);
+function startGame() {
+  boxElements.forEach((box) => {
+    box.addEventListener("click", handleClick, { once: true });
+  });
 }
 
-function swapTurn() {
-  isCrossPlayerTurn = !isCrossPlayerTurn;
-}
+startGame();
 
 
 
-// resetButton.onclick = startGame;
+// start();
+// restart.addEventListener('click', restartGame);
 
-// function placeMark(box, currentClass) {
-//   box.classList.add(currentClass);
+// function start() {
+//   isCrossPlayerTurn = true;
+//   box.forEach(box => {
+//     const removeCrossPlayer = box.classList.remove(cross, disabled);
+//     const removeCirclePlayer = box.classList.remove(circle, disabled);
+//     box.addEventListener('click', handleClick, {once: true})
+//   })
+// }
+
+// function restartGame() {
+//   start();
 // }
 
 // function handleClick(e) {
 //   const boxTarget = e.target;
-//   if (turn === cross) {
-//       boxTarget.style.backgroundImage = cross;
-//       turn = circle;
-//   } else {
-//       boxTarget.style.backgroundImage = circle;   
-//       turn = cross; 
-//   placeMark(boxTarget, turn);
+//   const currentClass = isCrossPlayerTurn ? cross : circle;
+//   placeMark(boxTarget, currentClass);
+//   swapTurn();
 // }
 
-// function startGame() {
-//   boxElements.forEach((box) => {
-//     box.addEventListener("click", handleClick, { once: true });
-//   });
+// function placeMark(box, currentClass) {
+//   box.classList.add(currentClass, disabled);
 // }
 
-// startGame();
+// function swapTurn() {
+//   isCrossPlayerTurn = !isCrossPlayerTurn;
+// }
+
+
+
+
+
+
+
+
+
 
 
 
