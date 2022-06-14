@@ -48,19 +48,31 @@ body {
   }
   
   .cross {
-    background-color: white;
-    /* background-image: url(./assets/cross.png); */
+    
+    background-image: url(./assets/cross.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
   }
   .cross::after {
-    content: url(./assets/cross.png);
+    background-color: yellow;
+    /* content: url(./assets/cross.png); */
   }
 
   .circle {
-    background-color: white;
-    /* background-image: url(./assets/circle.png); */
+    background-image: url(./assets/circle.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    position: relative;
+    background-position-x: center;
+    background-position-y: center;
   }
   .circle::after {
-    content: url(./assets/circle.png);
+    background-color: blue;
+    /* content: url(./assets/circle.png); */
+    
   }
 
   #reset {
