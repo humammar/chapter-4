@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chapter4-challenge-rockPaperScisor-Humam Marijan</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="header">
+        <div class="back">
+            <img class="backIcon" src="./assets/back.png" alt="...">
+        </div>
+        <div class="logo">LOGO</div>
+        <div class="title">ROCK PAPER SCISSORS</div>
+    </div>
+    <div class="board">
+        <div class="player">
+            <div class="box">
+                <h1 class="playerTag">PLAYER</h1>
+            </div>
+            <div onclick="playerTurn('rock')" class="box">
+                <img class="gameIcon batu" src="./assets/batu.png"/>
+            </div>
+            <div onclick="playerTurn('paper')"class="box">
+                <img class="gameIcon kertas" src="./assets/kertas.png"/>
+            </div>
+            <div onclick="playerTurn('scissors')"class="box">
+                <img class="gameIcon gunting" src="./assets/gunting.png"/>
+            </div>
+        </div>
+        <div class="vs">VS</div>
+        <div id="winResult"></div>
+        <div id="drawResult"></div>
+        <div id="loseResult"></div>
+        <div class="comp">
+            <div class="box">
+                <h1 class="playerTag">COMPUTER</h1>
+            </div>
+            <div class="box">
+                <img class="gameIcon batu" src="./assets/batu.png"/>
+            </div>
+            <div class="box">
+                <img class="gameIcon kertas" src="./assets/kertas.png"/>
+            </div>
+            <div class="box">
+                <img class="gameIcon gunting" src="./assets/gunting.png"/>
+            </div>
+         </div>
+    </div>
+    <center class="refresh">
+        <img class="refreshIcon" src="./assets/refresh.png">
+    </center>
+</body>
+</html>

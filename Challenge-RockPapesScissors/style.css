@@ -1,0 +1,119 @@
+body {
+    background-color: rgb(32, 32, 32);
+    display: grid;
+    margin: 0;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    padding: .5em 5em;
+    width: 100%;
+    margin-top: 2%;
+    /* background-color: red; */
+}
+
+.back {
+    /* background-image: url("./assets/back.png"); */
+    /* background-size: %;
+    background-repeat: no-repeat; */
+
+}
+
+.backIcon {
+    height: 40px;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.logo {
+    margin-right: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 1em;
+}
+
+.title {
+    color: white;
+    font-size: 36px;
+    font-weight: 700;
+    margin-left: .5em;
+}
+
+.board {
+    display: flex;
+    /* grid-template-columns: repeat(3, auto); */
+    justify-content: center;
+    align-content: center;
+    margin-bottom: 20px;
+    margin-top: 7%;
+    vertical-align: middle;
+    
+    
+}
+
+.player {
+    margin-right: 100px;
+    align-content: center;
+    color: rgb(185, 148, 78);
+    
+}
+
+.vs {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+    margin-top: 220px;
+
+    font-size: 80px;
+    font-weight: bold;
+    color: rgb(255, 59, 59);
+}
+
+.comp {
+    margin-left: 100px;
+    color: rgb(185, 148, 78);
+}
+
+.box {
+    width: 190px;
+    height: 100px;
+    border: 0px solid rgb(255, 255, 255);
+    cursor: pointer;
+    align-items: center;
+    align-content:center;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.gameIcon {
+    height: 100px;
+
+}
+
+.batu{
+    height: 80px;
+    padding-bottom: -10px;
+}
+
+.kertas {
+
+}
+
+.gunting {
+margin-top: 20px;
+}
+
+.refresh {
+   margin-top: 2%;
+}
+
+.refreshIcon {
+    height: 80px;
+}
