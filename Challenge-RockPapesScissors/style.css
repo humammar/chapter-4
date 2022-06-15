@@ -13,23 +13,16 @@ body {
     align-items: center;
     padding: .5em 5em;
     width: 100%;
-    margin-top: 2%;
-    /* background-color: red; */
+    margin-top: 2%;  
 }
 
-.back {
-    /* background-image: url("./assets/back.png"); */
-    /* background-size: %;
-    background-repeat: no-repeat; */
-}
+/* .back {
+   
+} */
 
 .back:hover {
-    /* display: flex;
-    flex-direction: column; */
     align-items: center;
-    /* width: 10px; */
-    zoom: 130%;
-    
+    zoom: 130%;    
 }
 
 .backIcon {
@@ -55,7 +48,6 @@ body {
 
 .board {
     display: flex;
-    /* grid-template-columns: repeat(3, auto); */
     justify-content: center;
     align-content: center;
     margin-bottom: 20px;
@@ -68,12 +60,10 @@ body {
 .player {
     margin-right: 100px;
     align-content: center;
-    color: rgb(185, 148, 78);
-    
+    color: rgb(185, 148, 78);    
 }
 
-.vs {
-    
+.vs {    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -82,7 +72,6 @@ body {
     align-content: center;
     text-align: center;
     vertical-align: middle;
-
     font-size: 80px;
     font-weight: bold;
     color: rgb(255, 59, 59);
@@ -107,14 +96,8 @@ body {
     background-color: rgb(255, 59, 59);
 }
 
-.draw {
+/* .draw {
    
-}
-
-/* .rectangle {
-    height: 50px;
-    width: 100px;
-    background-color: #555;
 } */
 
 .comp {
@@ -130,13 +113,11 @@ body {
     align-items: center;
     align-content:center;
     text-align: center;
-    padding-top: 20px;
-    
+    padding-top: 20px;    
 }
 
 .gameIcon {
     height: 100px;
-
 }
 
 .rock{
@@ -144,9 +125,9 @@ body {
     padding-bottom: -10px;
 }
 
-.paper {
+/* .paper {
     
-}
+} */
 
 .scissors {
 margin-top: 20px;
@@ -173,61 +154,35 @@ margin-top: 20px;
     opacity: 0.6;
     transition: 0.3s;
     cursor: pointer;
-  }
+}
   
-  .clickEffect:hover {opacity: 1}
+.clickEffect:hover {
+    opacity: 1
+}
 
-
-/* .gameOption {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 10em;
-    cursor: pointer;
-    width: 20%;
-  } */
-  
-  .gameOption > div.playerOption:hover {
+.gameOption > div.playerOption:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #C4C4C4;
     border-radius: 30px;
     width: 140px;
-  }
-  
-  /* .gameOption > div.playerOption:focus {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(185, 148, 78);
-    border-radius: 30px;
-    width: 140px;
-  }
-  
-  .gameOption > div.computerOption.selected {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(185, 148, 78);
-    border-radius: 30px;
-    width: 140px;
-  } */
+}
 
-  .chosenIndicator {
+.chosenIndicator {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(185, 148, 78);
     border-radius: 30px;
     width: 140px;
-  }
+}
 
-  .chosenIndicator-2 {
+.chosenIndicator-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: rgb(185, 148, 78);
     border-radius: 30px;
     width: 140px;
-  }
+}

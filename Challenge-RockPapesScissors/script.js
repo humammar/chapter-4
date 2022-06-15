@@ -92,8 +92,7 @@ playerIndicatorBackground = (choice) => {
     let paperChosenByPlayer = document.getElementById("playerPaper");
     let scissorsChosenByPlayer = document.getElementById("playerScissors");
 
-    let chosenAlready = 
-        document.getElementsByClassName("chosenIndicator"); 
+    let chosenAlready = document.getElementsByClassName("chosenIndicator"); 
 
     if(chosenAlready.length > 0) {
         chosenAlready[0].classList.remove("chosenIndicator");
@@ -114,8 +113,7 @@ computerIndicatorBackground = (choice) => {
     let paperChosenByComputer = document.getElementById("computerPaper");
     let scissorsChosenByComputer = document.getElementById("computerScissors");
 
-    let chosenAlready = 
-        document.getElementsByClassName("chosenIndicator-2"); 
+    let chosenAlready = document.getElementsByClassName("chosenIndicator-2"); 
 
     if(chosenAlready.length > 0) {
         chosenAlready[0].classList.remove("chosenIndicator-2");
