@@ -61,13 +61,13 @@ winnerResult = (playerInput, computerInput) => {
 resultCard = (result) => {
     if (result === "win") {
         let winResult = document.getElementById("card");
-        winResult.innerHTML = `<span>Player Win</span>`;        
+        winResult.innerHTML = `<span class="cardShape">Player Win</span>`;        
     } else if (result === "lose") {
         let winResult = document.getElementById("card");
-        winResult.innerHTML = `<span>Com Win</span>`;
+        winResult.innerHTML = `<span class="cardShape">Com Win</span>`;
     } else {
         let winResult = document.getElementById("card");
-        winResult.innerHTML = `<span>Draw</span>`;
+        winResult.innerHTML = `<span class="cardShape">Draw</span>`;
     }
 }
 
@@ -76,13 +76,26 @@ refreshButton = () => {
     isGameAlreadyBeenPlayed = false;
     let refreshPlayerChosenOption = document.getElementsByClassName
     ("chosenIndicator");
-    let refreshComputerChosenOption = document.getElementsByClassName
-    ("chosenIndicator-2");
     if (refreshPlayerChosenOption.length > 0) {
         refreshPlayerChosenOption[0].classList.remove("chosenIndicator");
     };
+    
+    let refreshComputerChosenOption = document.getElementsByClassName
+    ("chosenIndicator-2");
     if (refreshComputerChosenOption.length > 0) {
         refreshComputerChosenOption[0].classList.remove("chosenIndicator-2");
+    }
+
+    let refreshResultCard = document.getElementsByClassName
+    ("cardShape");
+    if (refreshResultCard.length > 0) {
+        refreshResultCard[0].classList.remove("cardShape");
+    }
+
+    let refreshResultCard = document.getElementsByClassName
+    ("vs");
+    if (refreshResultCard.length > 0) {
+        refreshResultCard[0].classList.remove("vs");
     }
 }
 

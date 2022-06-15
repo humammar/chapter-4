@@ -3,6 +3,7 @@ body {
     display: grid;
     margin: 0;
     height: 100%;
+    width: 91.68%;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -78,11 +79,43 @@ body {
     align-items: center;
     width: 15%;
     margin-top: 220px;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
 
     font-size: 80px;
     font-weight: bold;
     color: rgb(255, 59, 59);
 }
+
+.card {
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.cardShape {
+    color: white;
+    font-size: 40px;
+    text-align: center;
+    align-content: center;
+    vertical-align: middle;
+    height: 115px;
+    width: 250px;
+    border-radius: 20px;
+    background-color: rgb(255, 59, 59);
+}
+
+.draw {
+   
+}
+
+/* .rectangle {
+    height: 50px;
+    width: 100px;
+    background-color: #555;
+} */
 
 .comp {
     margin-left: 100px;
@@ -98,6 +131,7 @@ body {
     align-content:center;
     text-align: center;
     padding-top: 20px;
+    
 }
 
 .gameIcon {
@@ -111,7 +145,7 @@ body {
 }
 
 .paper {
-
+    
 }
 
 .scissors {
