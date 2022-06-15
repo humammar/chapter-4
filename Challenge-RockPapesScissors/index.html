@@ -26,42 +26,40 @@
                 <h1 class="playerTag">PLAYER</h1>
             </div>
             <div class="gameOption">
-                <div onclick="playerTurn('rock')" class="box playerOption" id="rockId">
+                <div onclick="playerTurn('rock')" class="box playerOption" id="playerRock">
                     <img class="gameIcon rock" src="./assets/batu.png"/>
                 </div>
-                <div onclick="playerTurn('paper')"class="box playerOption" id="paperId">
+                <div onclick="playerTurn('paper')"class="box playerOption" id="playerPaper">
                     <img class="gameIcon paper" src="./assets/kertas.png"/>
                 </div>
-                <div onclick="playerTurn('scissors')"class="box playerOption" id="scissorsId">
+                <div onclick="playerTurn('scissors')"class="box playerOption" id="playerScissors">
                     <img class="gameIcon scissors" src="./assets/gunting.png"/>
                 </div>
             </div>
             
         </div>
-        <div class="vs card">VS</div>
-        <div id="card"></div>
-        <div id="card"></div>
-        <div id="card"></div>
+        <div class="vs" id="card">VS</div>
+        
         <div class="comp">
             <div class="box">
                 <h1 class="playerTag">COMPUTER</h1>
             </div>
             <div class="gameOption">
-                <div class="box computerOption">
+                <div class="box computerOption" id="computerRock">
                     <img class="gameIcon rock" src="./assets/batu.png"/>
                 </div>
-                <div class="box computerOption">
+                <div class="box computerOption" id="computerPaper">
                     <img class="gameIcon paper" src="./assets/kertas.png"/>
                 </div>
-                <div class="box computerOption">
+                <div class="box computerOption" id="computerScissors">
                     <img class="gameIcon scissors" src="./assets/gunting.png"/>
                 </div>
             </div>
             
          </div>
     </div>
-    <center class="refresh">
-        <img class="refreshIcon" src="./assets/refresh.png">
+    <center class="refresh" onclick="refreshButton()">
+        <img class="refreshIcon clickEffect" src="./assets/refresh.png">
     </center>
 </body>
 </html>
