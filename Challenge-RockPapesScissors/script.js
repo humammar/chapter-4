@@ -1,43 +1,26 @@
-// let playerTurn = "player";
-// let computerTurn = "computer";
-// // let winner = "player";
-
 const gameOption = ["rock", "paper", "scissors"];
-
-// if (winner === "player") {
-//     let winResult = document.getElementById("winResult");
-//     let win = document.createElement("p");
-//     win.innerText = "Player Win";
-//     winResult.append(win);
-// } else if (winner === "computer") {
-//     let winResult = document.getElementById("winResult");
-//     let win = document.createElement("p");
-//     win.innerText = "Com Win";
-//     winResult.append(win);
-// } else {
-//     let winResult = document.getElementById("winResult");
-//     let win = document.createElement("p");
-//     win.innerText = "draw";
-//     winResult.append(win);
-// }
+let isGameAlreadyBeenPlayed = false;
 
 playerTurn = (playerChoose) => {
-    console.log("player", playerChoose)
-    // alert("player choose " + playerChoose)
-    const computerChoose = computerTurn();
-    const winner = winnerResult(playerChoose, computerChoose);
+    if (isGameAlreadyBeenPlayed === false) {
+        console.log("player", playerChoose);    
+        const computerChoose = computerTurn();
+        const winner = winnerResult(playerChoose, computerChoose);
 
-    console.log("computerChoose", computerChoose)
-    console.log("The Result is", winner);
-    // choiceIndicator(playerChoose);
-    resultCard(winner);
+        console.log("computerChoose", computerChoose)
+        console.log("The Result is", winner);
+        playerIndicatorBackground(playerChoose);
+        computerIndicatorBackground(computerChoose);
+        resultCard(winner);
+        isGameAlreadyBeenPlayed = true;
+    }    
 }
 
 computerTurn = () => {
     let index = generateRandom(3);
     console.log("index", index);
     return gameOption[index];
-};
+}
 
 function generateRandom(maxLimit = 3) {
     let rand = Math.random() * maxLimit;
@@ -78,41 +61,73 @@ winnerResult = (playerInput, computerInput) => {
 resultCard = (result) => {
     if (result === "win") {
         let winResult = document.getElementById("card");
-        winResult.innerHTML = "<span>Player Win</span>";
-        // let win = document.createElement("p");
-        // win.innerText = "Player Win";
-        // winResult.append(win);
+        winResult.innerHTML = `<span>Player Win</span>`;        
     } else if (result === "lose") {
         let winResult = document.getElementById("card");
-        winResult.innerHTML = "<span>Com Win</span>";
-        // let win = document.createElement("p");
-        // win.innerText = "Com Win";
-        // winResult.append(win);
+        winResult.innerHTML = `<span>Com Win</span>`;
     } else {
         let winResult = document.getElementById("card");
-        winResult.innerHTML = "<span>Draw</span>";
-        // let win = document.createElement("p");
-        // win.innerText = "Draw";
-        // winResult.append(win);
+        winResult.innerHTML = `<span>Draw</span>`;
     }
 }
 
-// // choiceIndicator = (Choice) => {
-// //     const rockChosen = document.getElementById("rockId");
-// //     const paperChosen = document.getElementById("paperId");
-// //     const scissorsChosen = document.getElementById("scissorsId");
-// //     if (choice === "rock") {
-        
-// //         rockChosen.classList.add("chosenIndicator");
-// //     } else if (choice == "paper") {
-       
-// //         paperChosen.classList.add("chosenIndicator");
-// //     } else {
-        
-// //         scissorsChosen.classList.add("chosenIndicator");
-// //     }
-// }
+refreshButton = () => {
+    // console.log("alert game refresh")
+    isGameAlreadyBeenPlayed = false;
+    let refreshPlayerChosenOption = document.getElementsByClassName
+    ("chosenIndicator");
+    let refreshComputerChosenOption = document.getElementsByClassName
+    ("chosenIndicator-2");
+    if (refreshPlayerChosenOption.length > 0) {
+        refreshPlayerChosenOption[0].classList.remove("chosenIndicator");
+    };
+    if (refreshComputerChosenOption.length > 0) {
+        refreshComputerChosenOption[0].classList.remove("chosenIndicator-2");
+    }
+}
+
+playerIndicatorBackground = (choice) => {
+    let rockChosenByPlayer = document.getElementById("playerRock");
+    let paperChosenByPlayer = document.getElementById("playerPaper");
+    let scissorsChosenByPlayer = document.getElementById("playerScissors");
+
+    let chosenAlready = 
+        document.getElementsByClassName("chosenIndicator"); 
+
+    if(chosenAlready.length > 0) {
+        chosenAlready[0].classList.remove("chosenIndicator");
+    }
+
+    if (choice === "rock") {
+        rockChosenByPlayer.classList.add("chosenIndicator");
+
+    } else if (choice == "paper") {        
+        paperChosenByPlayer.classList.add("chosenIndicator");
+    } else {        
+        scissorsChosenByPlayer.classList.add("chosenIndicator");
+    }
+}
+
+computerIndicatorBackground = (choice) => {
+    let rockChosenByComputer = document.getElementById("computerRock");
+    let paperChosenByComputer = document.getElementById("computerPaper");
+    let scissorsChosenByComputer = document.getElementById("computerScissors");
+
+    let chosenAlready = 
+        document.getElementsByClassName("chosenIndicator-2"); 
+
+    if(chosenAlready.length > 0) {
+        chosenAlready[0].classList.remove("chosenIndicator-2");
+    }
+
+    if (choice === "rock") {
+        rockChosenByComputer.classList.add("chosenIndicator-2");
+
+    } else if (choice == "paper") {        
+        paperChosenByComputer.classList.add("chosenIndicator-2");
+    } else {        
+        scissorsChosenByComputer.classList.add("chosenIndicator-2");
+    }
+}
 
 
-// generateRandom();
-// generateRandom(500);

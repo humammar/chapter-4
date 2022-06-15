@@ -20,7 +20,15 @@ body {
     /* background-image: url("./assets/back.png"); */
     /* background-size: %;
     background-repeat: no-repeat; */
+}
 
+.back:hover {
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    /* width: 10px; */
+    zoom: 130%;
+    
 }
 
 .backIcon {
@@ -97,16 +105,16 @@ body {
 
 }
 
-.batu{
+.rock{
     height: 80px;
     padding-bottom: -10px;
 }
 
-.kertas {
+.paper {
 
 }
 
-.gunting {
+.scissors {
 margin-top: 20px;
 }
 
@@ -117,6 +125,24 @@ margin-top: 20px;
 .refreshIcon {
     height: 80px;
 }
+
+.refreshIcon:hover {
+    size: 110%;
+}
+
+.clickEffect {
+    border: none;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .clickEffect:hover {opacity: 1}
+
 
 /* .gameOption {
     display: flex;
@@ -136,7 +162,7 @@ margin-top: 20px;
     width: 140px;
   }
   
-  .gameOption > div.playerOption:focus {
+  /* .gameOption > div.playerOption:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -146,6 +172,24 @@ margin-top: 20px;
   }
   
   .gameOption > div.computerOption.selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(185, 148, 78);
+    border-radius: 30px;
+    width: 140px;
+  } */
+
+  .chosenIndicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(185, 148, 78);
+    border-radius: 30px;
+    width: 140px;
+  }
+
+  .chosenIndicator-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
