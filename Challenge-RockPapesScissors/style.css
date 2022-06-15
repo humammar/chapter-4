@@ -118,14 +118,14 @@ margin-top: 20px;
     height: 80px;
 }
 
-.list-options {
+/* .gameOption {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 10em;
     cursor: pointer;
     width: 20%;
-  }
+  } */
   
   .gameOption > div.playerOption:hover {
     display: flex;
