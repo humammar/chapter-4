@@ -117,3 +117,39 @@ margin-top: 20px;
 .refreshIcon {
     height: 80px;
 }
+
+.list-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10em;
+    cursor: pointer;
+    width: 20%;
+  }
+  
+  .gameOption > div.playerOption:hover {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #C4C4C4;
+    border-radius: 30px;
+    width: 140px;
+  }
+  
+  .gameOption > div.playerOption:focus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(185, 148, 78);
+    border-radius: 30px;
+    width: 140px;
+  }
+  
+  .gameOption > div.computerOption.selected {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(185, 148, 78);
+    border-radius: 30px;
+    width: 140px;
+  }

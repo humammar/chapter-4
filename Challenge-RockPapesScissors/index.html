@@ -25,15 +25,18 @@
             <div class="box">
                 <h1 class="playerTag">PLAYER</h1>
             </div>
-            <div onclick="playerTurn('rock')" class="box">
-                <img class="gameIcon batu" src="./assets/batu.png"/>
+            <div class="gameOption">
+                <div onclick="playerTurn('rock')" class="box playerOption">batu
+                    <img class="gameIcon batu" src="./assets/batu.png"/>
+                </div>
+                <div onclick="playerTurn('paper')"class="box playerOption">kertas
+                    <img class="gameIcon kertas" src="./assets/kertas.png"/>
+                </div>
+                <div onclick="playerTurn('scissors')"class="box playerOption">gunting
+                    <img class="gameIcon gunting" src="./assets/gunting.png"/>
+                </div>
             </div>
-            <div onclick="playerTurn('paper')"class="box">
-                <img class="gameIcon kertas" src="./assets/kertas.png"/>
-            </div>
-            <div onclick="playerTurn('scissors')"class="box">
-                <img class="gameIcon gunting" src="./assets/gunting.png"/>
-            </div>
+            
         </div>
         <div class="vs">VS</div>
         <div id="winResult"></div>
@@ -43,15 +46,18 @@
             <div class="box">
                 <h1 class="playerTag">COMPUTER</h1>
             </div>
-            <div class="box">
-                <img class="gameIcon batu" src="./assets/batu.png"/>
+            <div class="gameOption">
+                <div class="box computerOption">
+                    <img class="gameIcon batu" src="./assets/batu.png"/>
+                </div>
+                <div class="box computerOption">
+                    <img class="gameIcon kertas" src="./assets/kertas.png"/>
+                </div>
+                <div class="box computerOption">
+                    <img class="gameIcon gunting" src="./assets/gunting.png"/>
+                </div>
             </div>
-            <div class="box">
-                <img class="gameIcon kertas" src="./assets/kertas.png"/>
-            </div>
-            <div class="box">
-                <img class="gameIcon gunting" src="./assets/gunting.png"/>
-            </div>
+            
          </div>
     </div>
     <center class="refresh">
